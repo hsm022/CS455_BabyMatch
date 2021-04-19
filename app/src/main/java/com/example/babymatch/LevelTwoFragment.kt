@@ -11,7 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 
-class MediumFragment(timeGiven:Long) : Fragment() {
+class LevelTwoFragment(timeGiven:Long) : Fragment() {
 
     private lateinit var myTimer: CountDownTimer
     var totalTime = timeGiven
@@ -25,7 +25,7 @@ class MediumFragment(timeGiven:Long) : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_medium, container, false)
+        val view = inflater.inflate(R.layout.fragment_level_two, container, false)
 
         //Add 4 images from resource
         val images = mutableListOf(R.drawable.baby_1,R.drawable.baby_2,R.drawable.baby_3,R.drawable.baby_4)
@@ -97,7 +97,7 @@ class MediumFragment(timeGiven:Long) : Fragment() {
                 //Show a toast message on screen
                 Toast.makeText(activity,"Good Job, play another level or difficulty",Toast.LENGTH_SHORT).show()
                 //Back to main activity
-                activity?.onBackPressed()
+                activity?.finish()
             }
 
             //Create alert and show it
@@ -167,7 +167,7 @@ class MediumFragment(timeGiven:Long) : Fragment() {
         val countTime: TextView = view.findViewById(R.id.timer)
         myTimer = object: CountDownTimer(totalTime, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                countTime.text = (millisUntilFinished / 1000).toString()
+                countTime.text = "Time Left: " + (millisUntilFinished / 1000).toString() + " seconds"
             }
             override fun onFinish() {
                 //Time is up, update the timer
@@ -184,7 +184,7 @@ class MediumFragment(timeGiven:Long) : Fragment() {
                     //Show a toast message on screen
                     Toast.makeText(activity,"Don't Worry, Try Again!",Toast.LENGTH_SHORT).show()
                     //Back to main activity
-                    activity?.onBackPressed()
+                    activity?.finish()
                 }
 
                 //Create alert and show it

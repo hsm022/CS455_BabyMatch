@@ -11,7 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 
-class EasyFragment(timeGiven:Long) : Fragment() {
+class LevelThreeFragment(timeGiven:Long) : Fragment() {
 
     private lateinit var myTimer: CountDownTimer
     var totalTime = timeGiven
@@ -25,18 +25,28 @@ class EasyFragment(timeGiven:Long) : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_easy, container, false)
+        val view = inflater.inflate(R.layout.fragment_level_three, container, false)
+
+        //Add 4 images from resource
         val images = mutableListOf(R.drawable.baby_1,R.drawable.baby_2,R.drawable.baby_3,R.drawable.baby_4)
 
-        //Add the images that exist again in images
+        //Add the images that exist again in images, total 8
         images.addAll(images)
+
+        //Add the images that exist again in images, total 16
+        images.addAll(images)
+
         //Shuffle the order of images
         images.shuffle()
 
         buttons = listOf(view.findViewById(R.id.imageButton1) as ImageButton, view.findViewById(R.id.imageButton2) as ImageButton,
                 view.findViewById(R.id.imageButton3) as ImageButton, view.findViewById(R.id.imageButton4) as ImageButton,
                 view.findViewById(R.id.imageButton5) as ImageButton, view.findViewById(R.id.imageButton6) as ImageButton,
-                view.findViewById(R.id.imageButton7) as ImageButton, view.findViewById(R.id.imageButton8) as ImageButton)
+                view.findViewById(R.id.imageButton7) as ImageButton, view.findViewById(R.id.imageButton8) as ImageButton,
+                view.findViewById(R.id.imageButton9) as ImageButton, view.findViewById(R.id.imageButton10) as ImageButton,
+                view.findViewById(R.id.imageButton11) as ImageButton, view.findViewById(R.id.imageButton12) as ImageButton,
+                view.findViewById(R.id.imageButton13) as ImageButton, view.findViewById(R.id.imageButton14) as ImageButton,
+                view.findViewById(R.id.imageButton15) as ImageButton, view.findViewById(R.id.imageButton16) as ImageButton)
 
         //create indices and map
         cards = buttons.indices.map{index->
@@ -83,7 +93,7 @@ class EasyFragment(timeGiven:Long) : Fragment() {
                 //Show a toast message on screen
                 Toast.makeText(activity,"Good Job, play another level or difficulty",Toast.LENGTH_SHORT).show()
                 //Back to main activity
-                activity?.onBackPressed()
+                activity?.finish()
             }
 
             //Create alert and show it
@@ -153,7 +163,7 @@ class EasyFragment(timeGiven:Long) : Fragment() {
         val countTime: TextView = view.findViewById(R.id.timer)
         myTimer = object: CountDownTimer(totalTime, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                countTime.text = (millisUntilFinished / 1000).toString()
+                countTime.text = "Time Left: " + (millisUntilFinished / 1000).toString() + " seconds"
             }
             override fun onFinish() {
                 //Time is up, update the timer
@@ -170,7 +180,7 @@ class EasyFragment(timeGiven:Long) : Fragment() {
                     //Show a toast message on screen
                     Toast.makeText(activity,"Don't Worry, Try Again!",Toast.LENGTH_SHORT).show()
                     //Back to main activity
-                    activity?.onBackPressed()
+                    activity?.finish()
                 }
 
                 //Create alert and show it

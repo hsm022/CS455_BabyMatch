@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EasyFragment">
+    tools:context=".LevelThreeFragment">
 
     <TextView
         android:id="@+id/timer"
@@ -24,18 +24,17 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timer" />
+        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton8"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageButton1"
@@ -46,7 +45,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton7"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton9"
         app:layout_constraintEnd_toStartOf="@+id/imageButton4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
@@ -57,8 +56,8 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton8"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton10"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/timer" />
@@ -68,71 +67,108 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton9"
-        app:layout_constraintStart_toStartOf="@+id/imageButton1"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton1" />
+        app:layout_constraintBottom_toTopOf="@+id/imageButton11"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton10"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintTop_toTopOf="@+id/imageButton5" />
 
     <ImageButton
         android:id="@+id/imageButton7"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton11"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintStart_toStartOf="@+id/imageButton1"
+        app:layout_constraintTop_toTopOf="@+id/imageButton8" />
 
     <ImageButton
         android:id="@+id/imageButton8"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton12"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        app:layout_constraintBottom_toTopOf="@+id/imageButton13"
+        app:layout_constraintStart_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
     <ImageButton
         android:id="@+id/imageButton9"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageButton1"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+        app:layout_constraintBottom_toTopOf="@+id/imageButton14"
+        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
     <ImageButton
         android:id="@+id/imageButton10"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+        app:layout_constraintBottom_toTopOf="@+id/imageButton15"
+        app:layout_constraintStart_toStartOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
     <ImageButton
         android:id="@+id/imageButton11"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageButton7"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+        app:layout_constraintBottom_toTopOf="@+id/imageButton16"
+        app:layout_constraintStart_toStartOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
 
     <ImageButton
         android:id="@+id/imageButton12"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/card"
+        app:layout_constraintStart_toStartOf="@+id/imageButton6"
+        app:layout_constraintTop_toTopOf="@+id/imageButton11" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/card"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageButton8"
+        app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton10" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageButton11"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

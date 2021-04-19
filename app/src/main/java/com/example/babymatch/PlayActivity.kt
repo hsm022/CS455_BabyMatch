@@ -1,7 +1,7 @@
 package com.example.babymatch
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class PlayActivity : AppCompatActivity() {
 
@@ -9,51 +9,64 @@ class PlayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play)
 
+        //Get extras from main activity
         val difficulty = intent.getStringExtra("EXTRA_DIFFICULTY")
         val level = intent.getStringExtra("EXTRA_LEVEL")
 
+        //
         if(difficulty == "Easy" && level == "One") {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, EasyFragment(30000))
+                .add(R.id.fragment_container, LevelOneFragment(30000))
                 .commit()
         }
         else if(difficulty == "Easy" && level == "Two") {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, MediumFragment(35000))
+                .add(R.id.fragment_container, LevelTwoFragment(40000))
                 .commit()
         }
         else if(difficulty == "Easy" && level == "Three") {
-
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, LevelThreeFragment(50000))
+                .commit()
         }
         else if(difficulty == "Medium" && level == "One") {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, EasyFragment(20000))
+                .add(R.id.fragment_container, LevelOneFragment(20000))
                 .commit()
         }
         else if(difficulty == "Medium" && level == "Two") {
-           // wMessage.text = "Fragment 5"
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, LevelTwoFragment(25000))
+                .commit()
         }
         else if(difficulty == "Medium" && level == "Three") {
-           // wMessage.text = "Fragment 6"
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, LevelThreeFragment(30000))
+                .commit()
         }
         else if(difficulty == "Hard" && level == "One") {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, EasyFragment(10000))
+                .add(R.id.fragment_container, LevelOneFragment(10000))
                 .commit()
         }
         else if(difficulty == "Hard" && level == "Two") {
-            //wMessage.text = "Fragment 8"
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, LevelTwoFragment(15000))
+                .commit()
         }
         else {
-            //wMessage.text = "Fragment 9"
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, LevelThreeFragment(20000))
+                .commit()
         }
     }
-
-
-
-
 }
