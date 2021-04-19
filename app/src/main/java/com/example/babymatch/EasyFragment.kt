@@ -1,16 +1,20 @@
 package com.example.babymatch
 
-import android.content.Intent
+import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.widget.ImageButton
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 
-class FirstFragment : Fragment() {
+class EasyFragment(timeGiven:Long) : Fragment() {
 
+    private lateinit var myTimer: CountDownTimer
+    var totalTime = timeGiven
     //Variables
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<BabyCard>
@@ -21,29 +25,26 @@ class FirstFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_first, container, false)
+        val view = inflater.inflate(R.layout.fragment_easy, container, false)
         val images = mutableListOf(R.drawable.baby_1,R.drawable.baby_2,R.drawable.baby_3,R.drawable.baby_4)
 
         //Add the images that exist again in images
         images.addAll(images)
         //Shuffle the order of images
         images.shuffle()
-        //Add one more image two times
-        images.add(images[1])
-        images.add(images[1])
-        //Shuffle the order of images again so that the last two images don't appear together
-        images.shuffle()
 
         buttons = listOf(view.findViewById(R.id.imageButton1) as ImageButton, view.findViewById(R.id.imageButton2) as ImageButton,
                 view.findViewById(R.id.imageButton3) as ImageButton, view.findViewById(R.id.imageButton4) as ImageButton,
                 view.findViewById(R.id.imageButton5) as ImageButton, view.findViewById(R.id.imageButton6) as ImageButton,
-                view.findViewById(R.id.imageButton7) as ImageButton, view.findViewById(R.id.imageButton8) as ImageButton,
-                view.findViewById(R.id.imageButton9) as ImageButton, view.findViewById(R.id.imageButton10) as ImageButton)
+                view.findViewById(R.id.imageButton7) as ImageButton, view.findViewById(R.id.imageButton8) as ImageButton)
 
         //create indices and map
         cards = buttons.indices.map{index->
             BabyCard(images[index])
         }
+
+        //Start the timer
+        startTimeCounter(totalTime,view)
 
         //set listener and perform the task
         buttons.forEachIndexed { index, button ->
@@ -68,13 +69,26 @@ class FirstFragment : Fragment() {
             }
         }
         if(!flag){
-            //Close the fragment
-            Toast.makeText(activity,"YOU WON",Toast.LENGTH_SHORT).show()
-            //new activity
-           // Intent (activity, PlayActivity::class.java).also {
-            //    it.putExtra("EXTRA_WIN","WON")
-            //    activity?.startActivity(it)
-            //}
+            //Stop the timer
+            myTimer.cancel()
+
+            //Create an alert dialog box
+            val builder: AlertDialog.Builder = AlertDialog.Builder(activity)
+            builder.setTitle("Result")
+            builder.setMessage("YOU WON!")
+            //Setup an OK button for the alert dialog box
+            builder.setPositiveButton("OK") { dialog, _ ->
+                //Dismiss the alert
+                dialog.dismiss()
+                //Show a toast message on screen
+                Toast.makeText(activity,"Good Job, play another level or difficulty",Toast.LENGTH_SHORT).show()
+                //Back to main activity
+                activity?.onBackPressed()
+            }
+
+            //Create alert and show it
+            val alertDialog: AlertDialog = builder.create()
+            alertDialog.show()
 
         }
     }
@@ -132,5 +146,37 @@ class FirstFragment : Fragment() {
             cards[index1].isMatched = true;
             cards[index2].isMatched = true;
         }
+    }
+
+    // This function creates the count down and also alerts the user when he/she loses
+    private fun startTimeCounter(totalTime:Long, view: View) {
+        val countTime: TextView = view.findViewById(R.id.timer)
+        myTimer = object: CountDownTimer(totalTime, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                countTime.text = (millisUntilFinished / 1000).toString()
+            }
+            override fun onFinish() {
+                //Time is up, update the timer
+                countTime.text = "Time is UP, YOU LOST!"
+
+                //Create an alert dialog box
+                val builder: AlertDialog.Builder = AlertDialog.Builder(activity)
+                builder.setTitle("Result")
+                builder.setMessage("YOU LOST!")
+                //Setup an OK button for the alert dialog box
+                builder.setPositiveButton("OK") { dialog, _ ->
+                    //Dismiss the alert
+                    dialog.dismiss()
+                    //Show a toast message on screen
+                    Toast.makeText(activity,"Don't Worry, Try Again!",Toast.LENGTH_SHORT).show()
+                    //Back to main activity
+                    activity?.onBackPressed()
+                }
+
+                //Create alert and show it
+                val alertDialog: AlertDialog = builder.create()
+                alertDialog.show()
+            }
+        }.start()
     }
 }
