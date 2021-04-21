@@ -86,7 +86,9 @@ Once the player finds all the matches or runs out of the given time, the game en
 <img src="images/lost.jpg" align="left" height="220"/>
 <img src="images/won.jpg" align="right" height="220"/>
 </p>
-
+<p>
+<br />The user needs to click OK to move to another screen.
+</p>
 
 #### Back to Welcome Screen
 Once the player clicks OK on the result screen, he/she goes back to the welcome screen again. This time their previous selection is the default value for difficulty and level. The player can either play the same round again or choose a different difficulty or level to play a different round.
