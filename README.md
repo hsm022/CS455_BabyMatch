@@ -22,15 +22,41 @@ The android application pacakage(APK) installation file for this application can
   You will need to allow an application such as a browser to download and initiate the installation of unknown apps in order to successfully install Baby Match on your phone.
   The following steps were completed on a Samsung phone running Android 10 but these steps should be similar on other devices as well.
   
-  * Go to Settings. 
+  * Go to Settings and click on Biometrics and security.
     
     <img src="images/settings.jpg" height="500" />
-  - Open Biometrics and security.
-  - Click on Install unkown apps.
-  - Select the browser you will be using to download the APK installation file. For example: Samsung Internet.
-  - Click on Allow from this source to enable installtion of unknown applications from the selceted browser.
   
-- #### Download the APK insatallation file.
+  * Click on Install unkown apps.
 
+    <img src="images/security.jpg" height="500" />
+    
+  * Select the browser you will be using to download the APK installation file. For example: Samsung Internet.
+    
+    <img src="images/browser.jpg" height="500" />
+    
+  * Click on Allow from this source to enable installtion of unknown applications from the selceted browser.
+    
+    <img src="images/allow app.jpg" height="250" />
+    
+- #### Download and Install the APK installation file.
+  Now you need to use the same browser to download the APK installation file.
+  * Open the link and click on the baby_match.apk to start downloading the file.
 
+    <img src="images/link.jpg" height="250" />
+  
+  * If a warning is given by Google Drive, please accept it.
+  
+    <img src="images/acceptRisk.jpg" height="250" /> 
+   
+  * Once downloading is complete, open the installation file and click Install.
 
+    <img src="images/install.jpg" height="250" />
+   
+  * If a warning is given by Play Store, please click INSTALL ANYWAY
+  
+    <img src="images/playStoreRisk.jpg" height="250" />
+  
+  * The application will finish installation and you will be given an option to open the application right away or just close with the application for now. The application has been successfully installed.
+   
+    <img src="images/InstallationDone.jpg" height="250" />
+## Operating Instsructions 
