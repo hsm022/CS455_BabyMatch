@@ -83,8 +83,8 @@ When the play button is clicked the player is shown a grid of cards and a count 
 Once the player finds all the matches or runs out of the given time, the game ends and the player sees a message indicating if he/she won or lost.
 
 <p float="left">
-<img src="images/lost.jpg" align="left" height="220"/>
-<img src="images/won.jpg" align="right" height="220"/>
+<img src="images/lost.jpg"  height="220"/>
+<img src="images/won.jpg" height="220"/>
 </p>
 <p>
 <br />The user needs to click OK to move to another screen.
