@@ -93,5 +93,21 @@ Once the player finds all the matches or runs out of the given time, the game en
 #### Back to Welcome Screen
 Once the player clicks OK on the result screen, he/she goes back to the welcome screen again. This time their previous selection is the default value for difficulty and level. The player can either play the same round again or choose a different difficulty or level to play a different round.
 
-<img src="images/goodJob.jpg" align="right" height="220"/>
-<img src="images/tryAgain.jpg" align="right" height="220"/>
+<p float="left">
+<img src="images/goodJob.jpg" height="220"/>
+<img src="images/tryAgain.jpg" height="220"/>
+</p>
+
+## Bug List
+-#### Enlarged images
+The images of babies are becoming large at the run time. A part of the face such as nose, eyes etc are shown instead of the full face of a baby. The photos are zoomed in.
+
+-#### Pressing back button before the game ends
+If the back button is pressed before the game ends and the user starts a new game. The previous activity kicks the user out when the game ends. For example: If a user starts a game and presses the back button while 20 seconds are left in the game. When the 20 seconds are up the app will force the user out of the current activity.
+
+## Contact Information
+If there are any issues with the game or troubleshooting is needed please contact me through my email: hminhas11@gmail.com
+
+## License 
+
+## References
