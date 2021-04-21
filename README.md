@@ -22,9 +22,11 @@ The android application pacakage(APK) installation file for this application can
   You will need to allow an application such as a browser to download and initiate the installation of unknown apps in order to successfully install Baby Match on your phone.
   The following steps were completed on a Samsung phone running Android 10 but these steps should be similar on other devices as well.
   
-  - Go to Settings
-  - Open Biometrics and security
-  - Click on Install unkown apps
+  * Go to Settings. 
+    
+    <img src="images/settings.jpg" height="500" />
+  - Open Biometrics and security.
+  - Click on Install unkown apps.
   - Select the browser you will be using to download the APK installation file. For example: Samsung Internet.
   - Click on Allow from this source to enable installtion of unknown applications from the selceted browser.
   
