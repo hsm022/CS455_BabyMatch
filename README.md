@@ -7,6 +7,7 @@ Baby Match is an android application that I built as a final project for my CS45
 ## Table of Content
 
 - [System Requirements](#system-Requirements)
+- [Permissions required by the application](#Permissions-required-by-the-application)
 ## System Requirements
 Baby Match runs on devices with Android Operating System. The minimum SDK version required for this application is SDK version 22. The application will run on any android phone or tablet that has SDK version 22 or higher. According to Android Studio more than 92% of all android devices that are connected to the Google Play Store are capable of running Baby Match. Anyone running Android Operating System 5.1 (Android Lollipop) or higher on their device can install the application.
 
