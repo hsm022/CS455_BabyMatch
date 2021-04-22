@@ -12,7 +12,7 @@ Baby Match is an android application that I built as a final project for my CS45
   - [Allow installation of unknown applications](#Allow-installation-of-unknown-applications)
   - [Download and Install the APK installation file](#Download-and-Install-the-APK-installation-file)
   - [Change the settings back](#Change-the-settings-back)
-- [Operating/Playing Instructions](#Operating//Playing-Instructions)
+- [Operating/Playing Instructions](#Operating\/Playing-Instructions)
   - [Welcome Screen](#Welcome-Screen)
   - [Game Screen](#Game-Screen)
   - [Result Screen](#Result-Screen)
@@ -20,6 +20,7 @@ Baby Match is an android application that I built as a final project for my CS45
 - [Design Pattern and list of files](#Design-Pattern-and-list-of-files)
 - [Bug List](#Bug-List)
 - [Contact Information](#Contact-Information)
+- [License and Copyright Information](#License-and-Copyright-Information)
 - [References](#References)
 
 ## System Requirements
