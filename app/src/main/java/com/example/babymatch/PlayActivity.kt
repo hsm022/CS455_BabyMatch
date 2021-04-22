@@ -13,50 +13,50 @@ class PlayActivity : AppCompatActivity() {
         val difficulty = intent.getStringExtra("EXTRA_DIFFICULTY")
         val level = intent.getStringExtra("EXTRA_LEVEL")
 
-        //
-        if(difficulty == "Easy" && level == "One") {
+        //Select a fragment and time based on user's selection
+        if(difficulty == getString(R.string.easy) && level == getString(R.string.one)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelOneFragment(30000))
                 .commit()
         }
-        else if(difficulty == "Easy" && level == "Two") {
+        else if(difficulty == getString(R.string.easy) && level == getString(R.string.two)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelTwoFragment(40000))
                 .commit()
         }
-        else if(difficulty == "Easy" && level == "Three") {
+        else if(difficulty == getString(R.string.easy) && level == getString(R.string.three)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelThreeFragment(50000))
                 .commit()
         }
-        else if(difficulty == "Medium" && level == "One") {
+        else if(difficulty == getString(R.string.medium) && level == getString(R.string.one)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelOneFragment(20000))
                 .commit()
         }
-        else if(difficulty == "Medium" && level == "Two") {
+        else if(difficulty == getString(R.string.medium) && level == getString(R.string.two)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelTwoFragment(25000))
                 .commit()
         }
-        else if(difficulty == "Medium" && level == "Three") {
+        else if(difficulty == getString(R.string.medium) && level == getString(R.string.three)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelThreeFragment(30000))
                 .commit()
         }
-        else if(difficulty == "Hard" && level == "One") {
+        else if(difficulty == getString(R.string.hard) && level == getString(R.string.one)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelOneFragment(10000))
                 .commit()
         }
-        else if(difficulty == "Hard" && level == "Two") {
+        else if(difficulty == getString(R.string.hard) && level == getString(R.string.two)) {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, LevelTwoFragment(15000))

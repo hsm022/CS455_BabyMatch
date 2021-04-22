@@ -10,7 +10,7 @@
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WELCOME TO BABY MATCH"
+        android:text="@string/welcome_message"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="26sp"
@@ -33,26 +33,26 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Select Level" />
+            android:text="@string/select_level" />
 
         <RadioButton
             android:id="@+id/radio_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="One" />
+            android:text="@string/one" />
 
         <RadioButton
             android:id="@+id/radio_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Two" />
+            android:text="@string/two" />
 
         <RadioButton
             android:id="@+id/radio_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Three" />
+            android:text="@string/three" />
 
     </RadioGroup>
 
@@ -70,26 +70,26 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Select Difficulty" />
+            android:text="@string/select_difficulty" />
 
         <RadioButton
             android:id="@+id/radio_easy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Easy" />
+            android:text="@string/easy" />
 
         <RadioButton
             android:id="@+id/radio_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium" />
+            android:text="@string/medium" />
 
         <RadioButton
             android:id="@+id/radio_hard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hard" />
+            android:text="@string/hard" />
 
     </RadioGroup>
 
@@ -97,7 +97,7 @@
         android:id="@+id/button_play"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="@string/play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radio_difficulty" />
 

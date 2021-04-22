@@ -13,9 +13,9 @@ import androidx.fragment.app.Fragment
 
 class LevelTwoFragment(timeGiven:Long) : Fragment() {
 
+    //Variables
     private lateinit var myTimer: CountDownTimer
     var totalTime = timeGiven
-    //Variables
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<BabyCard>
     private var selectedCard: Int? = null
@@ -45,6 +45,7 @@ class LevelTwoFragment(timeGiven:Long) : Fragment() {
         //Shuffle the order of images again so that the last two images don't appear together
         images.shuffle()
 
+        //list of image buttons
         buttons = listOf(view.findViewById(R.id.imageButton1) as ImageButton, view.findViewById(R.id.imageButton2) as ImageButton,
                 view.findViewById(R.id.imageButton3) as ImageButton, view.findViewById(R.id.imageButton4) as ImageButton,
                 view.findViewById(R.id.imageButton5) as ImageButton, view.findViewById(R.id.imageButton6) as ImageButton,
@@ -88,14 +89,14 @@ class LevelTwoFragment(timeGiven:Long) : Fragment() {
 
             //Create an alert dialog box
             val builder: AlertDialog.Builder = AlertDialog.Builder(activity)
-            builder.setTitle("Result")
-            builder.setMessage("YOU WON!")
+            builder.setTitle(getString(R.string.result))
+            builder.setMessage(getString(R.string.won))
             //Setup an OK button for the alert dialog box
-            builder.setPositiveButton("OK") { dialog, _ ->
+            builder.setPositiveButton(getString(R.string.ok)) { dialog, _ ->
                 //Dismiss the alert
                 dialog.dismiss()
                 //Show a toast message on screen
-                Toast.makeText(activity,"Good Job, play another level or difficulty",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity,getString(R.string.win_toast),Toast.LENGTH_SHORT).show()
                 //Back to main activity
                 activity?.finish()
             }
@@ -126,7 +127,7 @@ class LevelTwoFragment(timeGiven:Long) : Fragment() {
 
         //user clicks an already flipped card
         if(card.isFaceUp) {
-            Toast.makeText(activity,"Invalid",Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,getString(R.string.invalid_error),Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -167,22 +168,22 @@ class LevelTwoFragment(timeGiven:Long) : Fragment() {
         val countTime: TextView = view.findViewById(R.id.timer)
         myTimer = object: CountDownTimer(totalTime, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                countTime.text = "Time Left: " + (millisUntilFinished / 1000).toString() + " seconds"
+                countTime.text = getString(R.string.time_left) + (millisUntilFinished / 1000).toString() + getString(R.string.seconds)
             }
             override fun onFinish() {
                 //Time is up, update the timer
-                countTime.text = "Time is UP, YOU LOST!"
+                countTime.text = getString(R.string.time_up)
 
                 //Create an alert dialog box
                 val builder: AlertDialog.Builder = AlertDialog.Builder(activity)
-                builder.setTitle("Result")
-                builder.setMessage("YOU LOST!")
+                builder.setTitle(getString(R.string.result))
+                builder.setMessage(getString(R.string.lost))
                 //Setup an OK button for the alert dialog box
-                builder.setPositiveButton("OK") { dialog, _ ->
+                builder.setPositiveButton(getString(R.string.ok)) { dialog, _ ->
                     //Dismiss the alert
                     dialog.dismiss()
                     //Show a toast message on screen
-                    Toast.makeText(activity,"Don't Worry, Try Again!",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity,getString(R.string.lose_toast),Toast.LENGTH_SHORT).show()
                     //Back to main activity
                     activity?.finish()
                 }
