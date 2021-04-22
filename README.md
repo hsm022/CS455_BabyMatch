@@ -32,9 +32,7 @@ Baby Match runs on devices with Android Operating System. The minimum SDK versio
 Baby Match does not collect any data from the user’s device and therefore does not need permission to access the microphone, camera, contacts, logs, storage etc. No personal information or data is collected from the user’s device.
 
 ## Installation Instructions
-The application is not available on the Google Play Store therefore the user must install the application through a manual method. The android application pacakage(APK) installation file for this application can be downloaded from the following link:
-
-[Download Baby Match Application](https://drive.google.com/drive/folders/1P4EVQJOAUf1mq2EG9dGYuEnfTw5EU_mj?usp=sharing)
+The application is not available on the Google Play Store therefore the user must install the application through a manual method. 
 
 **Following are step by step instructions on how to install Baby Match on your phone:**
 - #### Allow installation of unknown applications
@@ -58,7 +56,10 @@ The application is not available on the Google Play Store therefore the user mus
     <img src="images/allow app.jpg" height="250" />
     
 - #### Download and Install the APK installation file
-  Now you need to use the same browser to download the APK installation file.
+  Now you need to use the same browser to download the APK installation file. The android application pacakage(APK) installation file for this application can be downloaded from the following link:
+
+    [Download Baby Match Application](https://drive.google.com/drive/folders/1P4EVQJOAUf1mq2EG9dGYuEnfTw5EU_mj?usp=sharing)
+
   * Open the link and click on the baby_match.apk to start downloading the file.
 
     <img src="images/link.jpg" height="250" />
