@@ -4,10 +4,16 @@
 # Baby Match
 Baby Match is an android application that I built as a final project for my CS455 course. The application is built by Harpinder Minhas (myself). Baby Match is a memory game application. A grid of cards is shown to the player. Each card in the grid contains a photo of a baby on its flip side. The player flips cards one by one and tries to match the photos of babies within the alloted time.
 
+## Table of Content
+
+- [System Requirements](#system-Requirements)
 ## System Requirements
 Baby Match runs on devices with Android Operating System. The minimum SDK version required for this application is SDK version 22. The application will run on any android phone or tablet that has SDK version 22 or higher. According to Android Studio more than 92% of all android devices that are connected to the Google Play Store are capable of running Baby Match. Anyone running Android Operating System 5.1 (Android Lollipop) or higher on their device can install the application.
 
 **Note:** The application has only been tested on Android phones. It might not work as expected on other devices.
+
+## Permissions required by the application
+Baby Match does not collect any data from the user’s device and therefore does not need permission to access the microphone, camera, contacts, logs, storage etc. No personal information or data is collected from the user’s device.
 
 ## Installation Instructions
 The application is not available on the Google Play Store therefore the user must install the application through a manual method. The android application pacakage(APK) installation file for this application can be downloaded from the following link:
