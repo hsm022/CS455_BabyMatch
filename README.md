@@ -8,6 +8,11 @@ Baby Match is an android application that I built as a final project for my CS45
 
 - [System Requirements](#system-Requirements)
 - [Permissions required by the application](#Permissions-required-by-the-application)
+- [Installation Instructions](#Installation-Instructions)
+  - [Allow installation of unknown applications](#Allow-installation-of-unknown-applications)
+  - [Download and Install the APK installation file](#Download-and-Install-the-APK-installation-file)
+  - [Change the settings back](#Change-the-settings-back)
+- [Operating/Playing Instructions](#Operating/Playing-Instructions)
 ## System Requirements
 Baby Match runs on devices with Android Operating System. The minimum SDK version required for this application is SDK version 22. The application will run on any android phone or tablet that has SDK version 22 or higher. According to Android Studio more than 92% of all android devices that are connected to the Google Play Store are capable of running Baby Match. Anyone running Android Operating System 5.1 (Android Lollipop) or higher on their device can install the application.
 
@@ -42,7 +47,7 @@ The application is not available on the Google Play Store therefore the user mus
     
     <img src="images/allow app.jpg" height="250" />
     
-- #### Download and Install the APK installation file.
+- #### Download and Install the APK installation file
   Now you need to use the same browser to download the APK installation file.
   * Open the link and click on the baby_match.apk to start downloading the file.
 
@@ -70,7 +75,7 @@ The application is not available on the Google Play Store therefore the user mus
 ## Operating/Playing Instructions
 Upon opening the app, the user is greeted with a welcome screen and a few options to select before playing the game.
 
-#### Welcome Screen
+- #### Welcome Screen
 A player needs to select two things before he/she can play the game: Difficulty and Level.
 
 There are three difficulties to choose from: Easy, Medium and Hard. Depending on the selection, the player gets a time limit to complete the round. 
@@ -81,12 +86,12 @@ The default values for difficulty and level are easy and one respectively. Once 
 
 <img src="images/welcome.jpg" align="center" height="300"/>
 
-#### Game Screen
+- #### Game Screen
 When the play button is clicked the player is shown a grid of cards and a count down timer with the amount of seconds left. All the cards initially face down waiting to be flipped. The player clicks on a card at a time to reveal a photo of a baby on the other side of the card. The player then clicks on a second card to reveal another photo. If the second card has the same photo as the first card, both the cards stay uncovered and the photos fade a little bit to indicate a match has been found, otherwise both cards go back to their original state with their photo sides facing down when the player clicks on a third card.
 
 <img src="images/game page.jpg" align="center" height="300"/>
 
-#### Result Screen
+- #### Result Screen
 Once the player finds all the matches or runs out of the given time, the game ends and the player sees a message indicating if he/she won or lost.
 
 <p float="left">
@@ -97,7 +102,7 @@ Once the player finds all the matches or runs out of the given time, the game en
 <br />The user needs to click OK to move to another screen.
 </p>
 
-#### Back to Welcome Screen
+- #### Back to Welcome Screen
 Once the player clicks OK on the result screen, he/she goes back to the welcome screen again. This time their previous selection is the default value for difficulty and level. The player can either play the same round again or choose a different difficulty or level to play a different round.
 
 <p float="left">
