@@ -13,7 +13,7 @@ class PlayActivity : AppCompatActivity() {
         val difficulty = intent.getStringExtra("EXTRA_DIFFICULTY")
         val level = intent.getStringExtra("EXTRA_LEVEL")
 
-        //
+        //Select a fragment and time based on user's selection
         if(difficulty == "Easy" && level == "One") {
             supportFragmentManager
                 .beginTransaction()

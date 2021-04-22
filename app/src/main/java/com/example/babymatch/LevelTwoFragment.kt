@@ -13,9 +13,9 @@ import androidx.fragment.app.Fragment
 
 class LevelTwoFragment(timeGiven:Long) : Fragment() {
 
+    //Variables
     private lateinit var myTimer: CountDownTimer
     var totalTime = timeGiven
-    //Variables
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<BabyCard>
     private var selectedCard: Int? = null
@@ -45,6 +45,7 @@ class LevelTwoFragment(timeGiven:Long) : Fragment() {
         //Shuffle the order of images again so that the last two images don't appear together
         images.shuffle()
 
+        //list of image buttons
         buttons = listOf(view.findViewById(R.id.imageButton1) as ImageButton, view.findViewById(R.id.imageButton2) as ImageButton,
                 view.findViewById(R.id.imageButton3) as ImageButton, view.findViewById(R.id.imageButton4) as ImageButton,
                 view.findViewById(R.id.imageButton5) as ImageButton, view.findViewById(R.id.imageButton6) as ImageButton,

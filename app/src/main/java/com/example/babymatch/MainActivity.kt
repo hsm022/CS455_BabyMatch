@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         rgLevel = findViewById(R.id.radio_level)
         wMessage = findViewById(R.id.welcome)
 
-        //Play button has been clicked
+        //Play button clicked
         btnPlay.setOnClickListener { _: View ->
             //Get IDs of the selected radio buttons
             val difficultyID = rgDifficulty.checkedRadioButtonId
