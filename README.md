@@ -99,15 +99,41 @@ Once the player clicks OK on the result screen, he/she goes back to the welcome 
 </p>
 
 ## Bug List
--#### Enlarged images
+- #### Enlarged images
 The images of babies are becoming large at the run time. A part of the face such as nose, eyes etc are shown instead of the full face of a baby. The photos are zoomed in.
 
--#### Pressing back button before the game ends
+- #### Pressing back button before the game ends
 If the back button is pressed before the game ends and the user starts a new game. The previous activity kicks the user out when the game ends. For example: If a user starts a game and presses the back button while 20 seconds are left in the game. When the 20 seconds are up the app will force the user out of the current activity.
 
 ## Contact Information
-If there are any issues with the game or troubleshooting is needed please contact me through my email: hminhas11@gmail.com
+If there are any issues with the game or troubleshooting is needed please contact me through email: hminhas11@gmail.com
 
-## License 
+## License and Copyright Information
+BabyMatch is licensed under the GNU General Public License v3.0 and is available for free.
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
 ## References
+#### Kotlin documentation
+https://kotlinlang.org/docs/android-overview.html
+
+#### Android Studio documentation
+https://developer.android.com/docs
+
+#### Code inspiration
+https://www.youtube.com/watch?v=U4Wtjewy7EY
+
+https://www.youtube.com/watch?v=E11hTgfsJVY
+
+#### Baby images, card image and license badge
+https://i.pinimg.com/originals/18/f2/f7/18f2f7ac0a5a947ac58dc6e77f3e72cb.png
+
+https://i.pinimg.com/originals/36/b1/e9/36b1e90a770ac7c6bdb7617358fa5a21.jpg
+
+https://i2-prod.dailyrecord.co.uk/incoming/article9790424.ece/ALTERNATES/s1227b/Screen-Shot-2017-02-10-at-073529.png
+
+http://clipart-library.com/clip-art/59-592317_faded-spade-100-plastic-poker-playing-cards.htm
+
+https://img.shields.io/badge/License-GPLv3-blue.svg
+
+
