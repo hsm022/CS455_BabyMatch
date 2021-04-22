@@ -98,8 +98,46 @@ Once the player clicks OK on the result screen, he/she goes back to the welcome 
 <img src="images/tryAgain.jpg" height="220"/>
 </p>
 
-## List of files
-* 
+## Design Pattern and list of files
+This application is built following **Model-View-Controller** design pattern. Following are the file that are used in the design pattern.
+
+#### Model
+* **BabyCard.kt:**
+  This is the model class file that contains data about each card such as is the card flipped?, has the card matched any other card?, and an identifier to identify which baby photo is associated to the card.
+  
+#### View
+* **activity_main.xml**
+  This is a view file that shows the user a welcome message and two radio groups with three options each to select difficulty and a level.
+  
+* **activity_play.xml**
+  This file contains a fragment container that is filled by one of the three following fragments: fragment_level_one.xml, fragment_level_two.xml or fragment_level_three.xml.
+  
+* **fragment_level_one.xml**
+  This file contains a text view to show the timer and contains eight image buttons to show a grid of cards.
+  
+* **fragment_level_two.xml**
+  This file contains a text view to show the timer and contains twelve image buttons to show a grid of cards.
+
+* **fragment_level_three.xml**
+  This file contains a text view to show the timer and contains sixteen image buttons to show a grid of cards.
+
+#### Controller
+* **MainActivity.kt:**
+  This file is a controller. It contains the main activity. This file works with the activity_main.xml file and gets the difficulty as well as the level from the user wants to play and starts a new activity.
+  
+* **PlayActivity.kt:**
+  This is also a controller. This file uses the information that is passed to it from the main activity. Depending on the difficulty and level selected by the user this file initiates a fragment and passes it the time user gets to play the game. This file selects the fragment that is used in the fragment container of the activity_play.xml file. From the three different fragments LevelOneFragment.kt,  LevelTwoFragment.kt, and LevelThreeFragment.kt only one is selected by the play activity and is initialized.
+  
+* **LevelOneFragment.kt:**
+LevelOneFragment.kt is initialized by the PlayActivity.kt file. It gets the time a user is allowed to play the game from PlayActivity.kt. It starts a timer as soon as it initializes. It works with the fragment_level_one.xml file to show a grid of 8 cards on the screen. It is also responsible for all the game logic including assigning photos to the model class and changing its properties. The file also checks if the user lost or won and shows the result on screen. Once user confirms the result, it finishes the play activity (PlayActivity.kt) which forces the user back to the main activity.
+
+* **LevelTwoFragment.kt:**
+LevelTwoFragment.kt is initialized by the PlayActivity.kt file. It gets the time a user is allowed to play the game from PlayActivity.kt. It starts a timer as soon as it initializes. It works with the fragment_level_two.xml file to show a grid of 12 cards on the screen. It is also responsible for all the game logic including assigning photos to the model class and changing its properties. The file also checks if the user lost or won and shows the result on screen. Once user confirms the result, it finishes the play activity (PlayActivity.kt) which forces the user back to the main activity.
+
+* **LevelThreeFragment.kt:**
+LevelThreeFragment.kt is initialized by the PlayActivity.kt file. It gets the time a user is allowed to play the game from PlayActivity.kt. It starts a timer as soon as it initializes. It works with the fragment_level_three.xml file to show a grid of 16 cards on the screen. It is also responsible for all the game logic including assigning photos to the model class and changing its properties. The file also checks if the user lost or won and shows the result on screen. Once user confirms the result, it finishes the play activity (PlayActivity.kt) which forces the user back to the main activity.
+
+  
 ## Bug List
 - #### Enlarged images
 The images of babies are becoming large at the run time. A part of the face such as nose, eyes etc are shown instead of the full face of a baby. The photos are zoomed in.
