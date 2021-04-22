@@ -2,7 +2,7 @@
 <img src="app/src/main/res/mipmap-xxxhdpi/ic_baby_round.png" align="right" />
 
 # Baby Match
-Baby Match is an android application that I built as a final project for my CS455 course. The application is built by Harpinder Minhas (myself). Baby Match is a memory game application. A grid of cards is shown to the player. Each card in the grid contains a photo of a baby on its flip side. The player flips cards one by one and tries to match the photos of babies within the alloted time.
+Baby Match is an android application that I built as a final project for my CS455 course. The application is built by Harpinder Minhas (myself). Baby Match is a memory game application. A grid of cards is shown to the player. Each card in the grid contains a photo of a baby on its flip side. The player flips cards one by one and tries to match the photos of babies within the alloted time period.
 
 ## Table of Content
 
@@ -12,7 +12,7 @@ Baby Match is an android application that I built as a final project for my CS45
   - [Allow installation of unknown applications](#Allow-installation-of-unknown-applications)
   - [Download and Install the APK installation file](#Download-and-Install-the-APK-installation-file)
   - [Change the settings back](#Change-the-settings-back)
-- [Operating/Playing Instructions](#Operating\/Playing-Instructions)
+- [Operating Instructions](#Operating-Instructions)
   - [Welcome Screen](#Welcome-Screen)
   - [Game Screen](#Game-Screen)
   - [Result Screen](#Result-Screen)
@@ -71,22 +71,20 @@ The application is not available on the Google Play Store therefore the user mus
 
     <img src="images/install.jpg" height="250" />
    
-  * If a warning is given by Play Store, please click INSTALL ANYWAY.
+  * If a warning is given by the Play Store, please click INSTALL ANYWAY.
   
     <img src="images/playStoreRisk.jpg" height="250" />
   
-  * The application will finish installation and you will be given an option to open the application right away or just close with the application for now. The application has been successfully installed.
+  * The application will finish installation and you will be given an option to open the application right away or just close the application for now. The application has been successfully installed.
    
     <img src="images/InstallationDone.jpg" height="250" />
     
 - #### Change the settings back
     It is important that you change the settings back so that the installation of unknown apps is set to not allowed again. Follow the same steps that were used to allow installation of unknown applications in a previous section.
     
-## Operating/Playing Instructions
-Upon opening the app, the user is greeted with a welcome screen and a few options to select before playing the game.
-
+## Operating Instructions
 - #### Welcome Screen
-A player needs to select two things before he/she can play the game: Difficulty and Level.
+Upon opening the app, the user is greeted with a welcome screen and a few options to select before playing the game. A player needs to select two things before he/she can play the game: Difficulty and Level.
 
 There are three difficulties to choose from: Easy, Medium and Hard. Depending on the selection, the player gets a time limit to complete the round. 
 
